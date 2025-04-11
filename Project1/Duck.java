@@ -4,9 +4,12 @@ public class Duck extends Animal{
         super.weight = weight;
     }
 
+    @Override
     public void Sound(){
         System.out.println("Quack!, Quack!!");
     }
+
+    @Override
     public void Eat(){
         System.out.println("Eating Mazuri Waterfowl Layer duck food");
     }

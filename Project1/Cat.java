@@ -4,9 +4,12 @@ public class Cat extends Animal{
         super.weight = weight;
     }
 
+    @Override
     public void Sound(){
         System.out.println("Meow!, Meow!!");
     }
+
+    @Override
     public void Eat(){
         System.out.println("Eating Friskies Seafood Sensations cat food");
     }

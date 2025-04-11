@@ -16,12 +16,20 @@ public class HourlyWorker extends Person
         this.hours = hours;
         this.rate = rate;
     }
+    public void setHours(int hours) {
+        this.hours = hours;
+    }
+
+    public void setRate(double rate) {
+        this.rate = rate;
+    }
     
     /**
      * Method that calculates the salary based on hourly rate
      * @return
      *  If worker worked 40 hours or lower, then pay is calculated by rate * hours. If worker worked overtime, then the overtime pay is multiplied by 1.5
      */
+    @Override
     public double ComputeSalary(){
         if(hours > 40){
             double regularPay = 40 * rate;
@@ -37,4 +45,6 @@ public class HourlyWorker extends Person
     {
         return (super.toString() + " " + this.ComputeSalary());
     }
+
+    
 }

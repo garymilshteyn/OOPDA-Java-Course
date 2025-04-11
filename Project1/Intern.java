@@ -13,10 +13,14 @@ public class Intern extends Person
         super.lastName = lastName;
         this.pay = pay;
     }
-    
+
+    public void setPay(double pay) {
+        this.pay = pay;
+    }
     /**
      * Returns the weekly pay
      */
+    @Override
     public double ComputeSalary(){
         return pay;
     }
@@ -26,4 +30,6 @@ public class Intern extends Person
     {
         return (super.toString() + " " + this.ComputeSalary());
     }
+
+    
 }

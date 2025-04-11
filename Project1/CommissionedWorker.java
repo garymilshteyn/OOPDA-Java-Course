@@ -15,10 +15,19 @@ public class CommissionedWorker extends Person
         this.sales = sales;
         this.rate = rate;
     }
-    
+
+    public void setSales(double sales) {
+        this.sales = sales;
+    }
+
+    public void setRate(double rate) {
+        this.rate = rate;
+    }
+
     /**
      * Method that returns the Salary based of the amount of sales made
      */
+    @Override
     public double ComputeSalary(){
         return sales * rate;
     }
@@ -28,4 +37,7 @@ public class CommissionedWorker extends Person
     {
         return (super.toString() + " " + this.ComputeSalary());
     }
+
+    
+
 }
