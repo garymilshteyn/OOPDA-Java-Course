@@ -1,0 +1,24 @@
+id = 400 name = kim
+There were 3 transactions.
+DEP
+DEP
+VIS
+
+id = 100 name = jim
+There were 4 transactions.
+DEP
+WIT
+VIS
+WIT
+
+id = 200 name = ron
+There were 3 transactions.
+WIT
+DEP
+WIT
+
+id = 300 name = harry
+There were 2 transactions.
+BAL
+DEP
+
