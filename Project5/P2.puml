@@ -1,0 +1,33 @@
+@startuml P2
+class Project5_driver {
+    +P2(): void
+}
+
+class SavingsAccountP5 {
+    -balance: double
+    -balanceLock: Lock
+    -sufficientFunds: Condition
+    +deposit(double): void
+    +withdraw(double): void
+    +getBalance(): double
+}
+
+class DepositRunnableP5 {
+    -account: SavingsAccountP5
+    -amount: double
+    -count: int
+    +run(): void
+}
+
+class WithdrawRunnableP5 {
+    -account: SavingsAccountP5
+    -amount: double
+    -count: int
+    +run(): void
+}
+
+Project5_driver --> DepositRunnableP5
+Project5_driver --> WithdrawRunnableP5
+DepositRunnableP5 --> SavingsAccountP5
+WithdrawRunnableP5 --> SavingsAccountP5
+@enduml

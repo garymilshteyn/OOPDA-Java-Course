@@ -1,0 +1,20 @@
+@startuml P1
+class Project5_driver {
+    +main(String[] args)
+    +P1()
+}
+
+class PrintChar {
+    -charToPrint: char
+    -times: int
+    +run(): void
+}
+
+class PrintNum {
+    -lastNum: int
+    +run(): void
+}
+
+Project5_driver --> PrintChar
+Project5_driver --> PrintNum
+@enduml

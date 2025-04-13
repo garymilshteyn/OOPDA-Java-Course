@@ -1,0 +1,13 @@
+@startuml P3
+class Project5_driver {
+    +P3(): void
+}
+
+class audioPlayer {
+    -soundFilePath: String
+    +run(): void
+    -playSound(String): void
+}
+
+Project5_driver --> audioPlayer
+@enduml
