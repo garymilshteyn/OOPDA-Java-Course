@@ -1,0 +1,74 @@
+@startuml
+abstract class Shape2D {
+    - xPos : int
+    - yPos : int
+    - fillColor : Color
+    - showOutline : boolean
+    - outlineColor : Color
+    + Move(dx : int, dy : int)
+    + SetPos(x : int, y : int)
+    + GetX() : int
+    + GetY() : int
+    + Draw(g : Graphics)
+    + setFillColor(index : int)
+    + getFillColor() : Color
+    + SetOutline(show : boolean)
+    + SetOutlineColor(index : int)
+    + ShowOutline() : boolean
+    + GetOutlineColor() : Color
+    + Animate()
+    + SetSpeed(dx : int, dy : int)
+}
+
+class Circle2D {
+    - diameter : int
+    + Circle2D()
+    + Circle2D(colorIndex, x, y, diameter)
+    + Draw(g : Graphics)
+}
+class Rectangle2D {
+    - width : int
+    - height : int
+    + Rectangle2D(colorIndex, x, y, width, height)
+    + Draw(g : Graphics)
+}
+class Oval2D {
+    - width : int
+    - height : int
+    + Oval2D(colorIndex, x, y, width, height)
+    + Draw(g : Graphics)
+}
+class Polygon2D {
+    - xPoints : int[]
+    - yPoints : int[]
+    - numPoints : int
+    + Polygon2D(colorIndex, x, y, xPoints, yPoints)
+    + Draw(g : Graphics)
+}
+class StarPoly2D {
+    - xPoints : int[]
+    - yPoints : int[]
+    - numPoints : int
+    + StarPoly2D(colorIndex, x, y)
+    + StarPoly2D(colorIndex, x, y, outerRadius, innerRadius)
+    + Draw(g : Graphics)
+}
+class Sprite2D {
+    - frames : BufferedImage[]
+    - currentFrame : int
+    - frameCount : int
+    - dx : int
+    - dy : int
+    + Sprite2D(x, y, frames)
+    + SetSpeed(dx, dy)
+    + Animate()
+    + Draw(g : Graphics)
+}
+
+Circle2D --|> Shape2D
+Rectangle2D --|> Shape2D
+Oval2D --|> Shape2D
+Polygon2D --|> Shape2D
+StarPoly2D --|> Shape2D
+Sprite2D --|> Shape2D
+@enduml
